@@ -1,0 +1,23 @@
+.form{
+    width: 100%;
+}
+.button{
+    height: 40px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.inner-form{
+    width: 20rem;
+    height: 25rem;
+    background: gray;
+    
+    color: white;
+}
+input{
+    width: 12rem;
+    
+}
+

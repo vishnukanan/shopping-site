@@ -1,0 +1,13 @@
+{% for i in db %}
+<form action="http://127.0.0.1:8000/wish/{{ i.item.id }}" method="get"> 
+    <select name="size" class="form-select mb-2">
+        {% for j in i.selected_size %}
+        <option value="{{ j }}">{{ j }}</option>
+        {% endfor %}
+
+    </select>
+    <input type="submit" class="bg-primary text-white border border-2 rounded-2" value="addtocart">
+    
+    </form>
+    {% endfor %}
+     

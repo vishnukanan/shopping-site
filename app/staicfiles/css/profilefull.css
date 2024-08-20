@@ -1,0 +1,23 @@
+
+img{
+    height: 14rem;
+    width: 15rem;
+}
+@media  screen and (max-width:476px) {
+    img{
+        height: 11rem;
+        width: 11rem;
+
+    }
+
+}
+.card{
+    width: 18rem;
+    height: 27rem;
+}
+button{
+    background: blue;
+    color: white;
+    border-radius: 2rem;
+}
+

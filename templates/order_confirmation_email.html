@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <h2>Order Confirmation</h2>
+    <p>Thank you for your order! Here are the details:</p>
+    <ul>
+        {% for item in order_items %}
+            <li>
+                <p>product:{{ item.product }} </p>
+               <p>  Quantity: {{ item.quantity }} </p>
+                <p> Total Price: {{ item.price }} </p>
+            </li>
+        {% endfor %}
+    
+    <p>Amount:{{total_price}}</p>
+    <p>Expected Delivery Date: {{ expected_delivery_date }}</p>
+    <p>Thank you for shopping with us!</p>
+</body>
+</html>

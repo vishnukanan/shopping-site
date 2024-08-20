@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container ">
+        <div class="vh-100 d-flex justify-content-center align-items-center bg-black text-light"> 
+
+        
+        <form  enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+    
+            fullname <br><input type="text" class="pt-1" name="fullname" value="{{data.fullname}}"><br><br>
+    
+            email <br><input type="email" name="email" value="{{data.email}}"><br><br>
+    
+            mobile no  <br><input type="number" name="mobile" value="{{data.phone}}"><br><br>
+            gender <br>
+           <input class="px-5" type="radio" name="gender" value="male" {% if data.gender == 'male' %} checked {% endif %}>Male
+            <input type="radio" name="gender" value="female" {% if data.gender == 'female' %} checked {% endif %}>Female <br><br>
+
+            profile pic <br><input type="file" name="img" value="{{ data.propic.url }}"><br> <br>
+            <input type="submit" value="update">
+    
+        </form>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
+    
